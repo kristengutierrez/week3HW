@@ -42,6 +42,9 @@
                                                 <constraint firstItem="oYd-hR-rZ5" firstAttribute="top" secondItem="qlL-iM-8Ap" secondAttribute="topMargin" constant="6" id="Sed-Er-SLz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ddc-wX-44w" kind="show" id="f2T-I4-MJx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="pp2-j0-Tyn">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -141,6 +144,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWS-6I-nyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071" y="317"/>
+        </scene>
+        <!--Repo Search View Controller-->
+        <scene sceneID="AM3-g8-5qt">
+            <objects>
+                <viewController id="Ddc-wX-44w" customClass="RepoSearchViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TVZ-O7-NKX"/>
+                        <viewControllerLayoutGuide type="bottom" id="gLt-lU-RJw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5vJ-rv-dAM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UXp-aM-sqB">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="2tz-lE-wk6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UXp-aM-sqB" firstAttribute="leading" secondItem="5vJ-rv-dAM" secondAttribute="leadingMargin" constant="-16" id="6yk-eU-LxY"/>
+                            <constraint firstItem="gLt-lU-RJw" firstAttribute="top" secondItem="UXp-aM-sqB" secondAttribute="bottom" id="akP-sY-nCr"/>
+                            <constraint firstItem="UXp-aM-sqB" firstAttribute="top" secondItem="TVZ-O7-NKX" secondAttribute="bottom" id="aoa-vM-j0d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UXp-aM-sqB" secondAttribute="trailing" constant="-16" id="uJu-BM-gH0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="2tz-lE-wk6" id="OyW-Cr-zYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUh-9d-s7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="317"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8N-9j-hAF">
