@@ -10,7 +10,7 @@ import Foundation
 
 class GithubService {
   class func repositoriesForSearchTerm(searchTerm : String) {
-    let baseURL =   "https://api.github.com/search/repositories"
+    let baseURL =   "http://localhost:3000"
     let finalURL = baseURL + "?q=\(searchTerm)"
     if let url = NSURL(string: finalURL) {
       NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
