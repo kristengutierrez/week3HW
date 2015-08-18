@@ -72,9 +72,6 @@
                                                 <constraint firstItem="OqC-pp-zu7" firstAttribute="top" secondItem="WhD-9F-Vsb" secondAttribute="topMargin" constant="6" id="rt8-nw-a3q"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ddc-wX-44w" kind="show" id="gL7-gk-Y2W"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -209,7 +206,4 @@
             <point key="canvasLocation" x="259" y="317"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="iFP-TG-5aS"/>
-    </inferredMetricsTieBreakers>
 </document>
