@@ -26,7 +26,7 @@ class AuthService {
         if let httpResponse = response as? NSHTTPURLResponse {
           if let rootObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as? [String : AnyObject],
             token = rootObject["access_token"] as? String {
-              println(token)
+              //keychainService.saveToken(token)
           }
         }
     }) .resume()

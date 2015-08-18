@@ -187,6 +187,39 @@
             </objects>
             <point key="canvasLocation" x="1728" y="317"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="W6O-rO-FOu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="AP7-Yf-3R9" customClass="LoginViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oL7-As-WWH"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ST-ZW-p6M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7u-BC-9AB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS8-VD-tnu">
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="AP7-Yf-3R9" eventType="touchUpInside" id="LxU-0q-dy3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="aS8-VD-tnu" secondAttribute="centerY" id="QrR-e3-LL0"/>
+                            <constraint firstAttribute="centerX" secondItem="aS8-VD-tnu" secondAttribute="centerX" id="Wdy-0H-wgL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3e-xH-0cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="-379"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8N-9j-hAF">
             <objects>
