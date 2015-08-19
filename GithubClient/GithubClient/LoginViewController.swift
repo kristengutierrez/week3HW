@@ -9,8 +9,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+  
+
 
   @IBAction func buttonPressed(sender: AnyObject) {
+    if let token = KeychainService.loadToken(){
+      
+//      self.presentViewController(MenuTableViewController : UITableViewController.self, animated: true, completion: nil)
+      
+    } else {
+      AuthService.performInitialRequest()
+    }
+
+    
   }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +31,12 @@ class LoginViewController: UIViewController {
 
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    if let token = KeychainService.loadToken(){
-      
-    } else {
-      AuthService.performInitialRequest()
-    }
+//    if let token = KeychainService.loadToken(){
+//      
+//      
+//    } else {
+//      AuthService.performInitialRequest()
+//    }
   }
   
   

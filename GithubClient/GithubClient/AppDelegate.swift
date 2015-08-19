@@ -17,13 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
     if let token = KeychainService.loadToken(){
-      
-      
-      
+    
+//      let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//      if let menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuTableViewController") as? MenuTableViewController {
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        window?.makeKeyAndVisible()
+//        window?.rootViewController = menuVC
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      var viewController: MenuTableViewController = (storyboard.instantiateViewControllerWithIdentifier("MenuTableViewController") as? MenuTableViewController)!
+      var navigationController = self.window?.rootViewController as? UINavigationController
+      navigationController!.pushViewController(navigationController!, animated: true)
+//      UIViewController.presentViewController(MenuTableViewController, animated: true)
     } else {
       let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
       if let loginVC = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
-window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = loginVC
       }

@@ -3,7 +3,7 @@ import Security
 
 // Identifiers
 let userAccount = "github"
-let accessGroup = "MySerivice"
+let accessGroup = "MyService"
 
 // Arguments for the keychain queries
 let kSecClassValue = kSecClass as NSString

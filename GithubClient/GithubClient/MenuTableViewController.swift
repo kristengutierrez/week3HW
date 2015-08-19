@@ -14,7 +14,7 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
 
       if let token = KeychainService.loadToken() {
-        
+        println(token)
       } else {
       AuthService.performInitialRequest()
       }

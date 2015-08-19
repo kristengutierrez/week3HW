@@ -22,11 +22,11 @@ class AuthService {
       request.HTTPMethod = "POST"
       request.setValue("application/json", forHTTPHeaderField: "Accept")
       NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-        var jsonError : NSError?
         if let httpResponse = response as? NSHTTPURLResponse {
+                  var jsonError : NSError?
           if let rootObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as? [String : AnyObject],
             token = rootObject["access_token"] as? String {
-              //keychainService.saveToken(token)
+              KeychainService.saveToken(token)
           }
         }
     }) .resume()
