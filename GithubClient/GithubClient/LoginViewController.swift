@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     super.viewDidAppear(animated)
     if let token = KeychainService.loadToken(){
       
+    } else {
+      AuthService.performInitialRequest()
     }
   }
   

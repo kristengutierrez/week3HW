@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     } else {
       let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-      if let loginVC = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
+      if let loginVC = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
 window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = loginVC

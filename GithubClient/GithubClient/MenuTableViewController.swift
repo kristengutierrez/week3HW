@@ -13,7 +13,7 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      if let token = keychainService.loadToken() {
+      if let token = KeychainService.loadToken() {
         
       } else {
       AuthService.performInitialRequest()
