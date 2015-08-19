@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
   }
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: "newToken", name: kTokenNotification, object: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -38,7 +40,9 @@ class LoginViewController: UIViewController {
 //      AuthService.performInitialRequest()
 //    }
   }
-  
+  func newToken() {
+    performSegueWithIdentifier("PresentMenu", sender: nil)
+  }
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,4 +60,9 @@ class LoginViewController: UIViewController {
     }
     */
 
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: kTokenNotification, object: nil)
+  }
+  
+  
 }
