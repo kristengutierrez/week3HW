@@ -20,6 +20,11 @@
 		17933B671B864F1300B0FC4B /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B661B864F1300B0FC4B /* RepoCell.swift */; };
 		17933B691B865FB600B0FC4B /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B681B865FB600B0FC4B /* UserSearchViewController.swift */; };
 		17933B6B1B86607100B0FC4B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B6A1B86607100B0FC4B /* UserCell.swift */; };
+		17933B6D1B866B5000B0FC4B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B6C1B866B5000B0FC4B /* ImageService.swift */; };
+		17933B6F1B866DEE00B0FC4B /* ToUserDetailAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B6E1B866DEE00B0FC4B /* ToUserDetailAnimationController.swift */; };
+		17933B711B866F7100B0FC4B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B701B866F7100B0FC4B /* UserDetailViewController.swift */; };
+		17933B731B867E8200B0FC4B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B721B867E8200B0FC4B /* WebViewController.swift */; };
+		17933B751B8687F800B0FC4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B741B8687F800B0FC4B /* Extensions.swift */; };
 		17E1E2171B82771500720B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1E2161B82771500720B98 /* AppDelegate.swift */; };
 		17E1E2191B82771500720B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1E2181B82771500720B98 /* ViewController.swift */; };
 		17E1E21C1B82771500720B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E1E21A1B82771500720B98 /* Main.storyboard */; };
@@ -55,6 +60,11 @@
 		17933B661B864F1300B0FC4B /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		17933B681B865FB600B0FC4B /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		17933B6A1B86607100B0FC4B /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		17933B6C1B866B5000B0FC4B /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		17933B6E1B866DEE00B0FC4B /* ToUserDetailAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToUserDetailAnimationController.swift; sourceTree = "<group>"; };
+		17933B701B866F7100B0FC4B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		17933B721B867E8200B0FC4B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		17933B741B8687F800B0FC4B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		17E1E2111B82771500720B98 /* GithubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E1E2151B82771500720B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E1E2161B82771500720B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,11 +102,14 @@
 			isa = PBXGroup;
 			children = (
 				17E1E23A1B82882000720B98 /* GithubService.swift */,
-				17933B621B853E1500B0FC4B /* User.swift */,
 				17933B581B83D22A00B0FC4B /* AuthService.swift */,
+				17933B6C1B866B5000B0FC4B /* ImageService.swift */,
 				17933B5A1B83D37700B0FC4B /* Keys.swift */,
 				17933B601B851E8000B0FC4B /* Constants.swift */,
+				17933B621B853E1500B0FC4B /* User.swift */,
+				17933B641B86426B00B0FC4B /* UserJSONParser.swift */,
 				17933B541B83A10F00B0FC4B /* Repos.swift */,
+				17933B521B839F8C00B0FC4B /* RepoJSONParser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -106,6 +119,9 @@
 			children = (
 				17E1E23C1B828AE100720B98 /* RepoSearchViewController.swift */,
 				17933B681B865FB600B0FC4B /* UserSearchViewController.swift */,
+				17933B741B8687F800B0FC4B /* Extensions.swift */,
+				17933B701B866F7100B0FC4B /* UserDetailViewController.swift */,
+				17933B6E1B866DEE00B0FC4B /* ToUserDetailAnimationController.swift */,
 				17933B5C1B83EC0E00B0FC4B /* LoginViewController.swift */,
 				17E1E2181B82771500720B98 /* ViewController.swift */,
 				17E1E2381B82834000720B98 /* MenuTableViewController.swift */,
@@ -117,11 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				17E1E21A1B82771500720B98 /* Main.storyboard */,
+				17933B721B867E8200B0FC4B /* WebViewController.swift */,
 				17933B661B864F1300B0FC4B /* RepoCell.swift */,
 				17933B6A1B86607100B0FC4B /* UserCell.swift */,
 				17933B5E1B84FC1B00B0FC4B /* KeyChainService.swift */,
-				17933B521B839F8C00B0FC4B /* RepoJSONParser.swift */,
-				17933B641B86426B00B0FC4B /* UserJSONParser.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -288,14 +303,19 @@
 				17933B631B853E1500B0FC4B /* User.swift in Sources */,
 				17E1E23D1B828AE100720B98 /* RepoSearchViewController.swift in Sources */,
 				17E1E2191B82771500720B98 /* ViewController.swift in Sources */,
+				17933B6F1B866DEE00B0FC4B /* ToUserDetailAnimationController.swift in Sources */,
+				17933B731B867E8200B0FC4B /* WebViewController.swift in Sources */,
 				17E1E23B1B82882000720B98 /* GithubService.swift in Sources */,
 				17933B6B1B86607100B0FC4B /* UserCell.swift in Sources */,
+				17933B711B866F7100B0FC4B /* UserDetailViewController.swift in Sources */,
 				17E1E2171B82771500720B98 /* AppDelegate.swift in Sources */,
+				17933B751B8687F800B0FC4B /* Extensions.swift in Sources */,
 				17933B671B864F1300B0FC4B /* RepoCell.swift in Sources */,
 				17E1E2391B82834000720B98 /* MenuTableViewController.swift in Sources */,
 				17933B551B83A10F00B0FC4B /* Repos.swift in Sources */,
 				17933B651B86426B00B0FC4B /* UserJSONParser.swift in Sources */,
 				17933B531B839F8C00B0FC4B /* RepoJSONParser.swift in Sources */,
+				17933B6D1B866B5000B0FC4B /* ImageService.swift in Sources */,
 				17933B5F1B84FC1B00B0FC4B /* KeyChainService.swift in Sources */,
 				17933B5B1B83D37700B0FC4B /* Keys.swift in Sources */,
 				17933B5D1B83EC0E00B0FC4B /* LoginViewController.swift in Sources */,

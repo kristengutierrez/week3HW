@@ -240,10 +240,44 @@
             </objects>
             <point key="canvasLocation" x="1728" y="317"/>
         </scene>
-        <!--View Controller-->
+        <!--User Detail View Controller-->
+        <scene sceneID="sXU-dI-zCZ">
+            <objects>
+                <viewController id="33B-0D-4Lu" customClass="UserDetailViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PtW-gS-4CR"/>
+                        <viewControllerLayoutGuide type="bottom" id="exX-6J-nOf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eis-14-dl6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apk-z8-Em1">
+                                <rect key="frame" x="238" y="60" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="Ml0-yY-x0C"/>
+                                    <constraint firstAttribute="height" constant="124" id="hay-47-5DI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="apk-z8-Em1" secondAttribute="centerX" id="Sh3-N9-eba"/>
+                            <constraint firstItem="apk-z8-Em1" firstAttribute="top" secondItem="PtW-gS-4CR" secondAttribute="bottom" constant="40" id="wgE-cU-krX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="apk-z8-Em1" id="QQi-GF-aW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGR-6K-ud8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="1062"/>
+        </scene>
+        <!--Web View Controller-->
         <scene sceneID="hBN-Fm-zeg">
             <objects>
-                <viewController id="Km5-JD-8my" sceneMemberID="viewController">
+                <viewController id="Km5-JD-8my" customClass="WebViewController" customModule="GithubClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X1n-7h-XvW"/>
                         <viewControllerLayoutGuide type="bottom" id="27V-G1-YPM"/>
@@ -251,19 +285,7 @@
                     <view key="view" contentMode="scaleToFill" id="vzr-bD-TcK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj7-Ms-kE8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Fj7-Ms-kE8" firstAttribute="leading" secondItem="vzr-bD-TcK" secondAttribute="leadingMargin" constant="-16" id="AGY-EG-KAu"/>
-                            <constraint firstItem="27V-G1-YPM" firstAttribute="top" secondItem="Fj7-Ms-kE8" secondAttribute="bottom" id="gbD-2X-Lpn"/>
-                            <constraint firstItem="Fj7-Ms-kE8" firstAttribute="top" secondItem="X1n-7h-XvW" secondAttribute="bottom" id="o94-ad-IVM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fj7-Ms-kE8" secondAttribute="trailing" constant="-16" id="yEc-tt-9rO"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s67-Kl-1m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,6 +321,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="33B-0D-4Lu" kind="presentation" id="P3P-gm-a2t"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
