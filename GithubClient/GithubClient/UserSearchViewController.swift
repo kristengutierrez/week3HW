@@ -9,7 +9,7 @@
 import UIKit
 
 class UserSearchViewController: UIViewController {
-  
+  var users = [User]()
   
   @IBOutlet weak var searchBar: UISearchBar!
   
@@ -39,4 +39,18 @@ class UserSearchViewController: UIViewController {
     }
     */
 
+}
+
+extension UserSearchViewController : UISearchBarDelegate {
+  
+  
+}
+
+extension UserSearchViewController : UICollectionViewDataSource {
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return self.users.count
+  }
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    
+  }
 }
