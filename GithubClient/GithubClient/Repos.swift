@@ -8,11 +8,8 @@
 
 import UIKit
 
-struct GithubSearch {
+struct Repos {
   let name : String
-  let avatar_url : String?
   let url : String?
-  let description : String?
   let language : String?
-  var profileImage : UIImage?
 }

@@ -12,5 +12,5 @@ import Foundation
 struct User {
   let login : String
   let avatarURL : String
-  let id : String
+  let id : Int
 }

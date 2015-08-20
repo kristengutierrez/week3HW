@@ -42,14 +42,27 @@ class RepoSearchViewController: UIViewController {
 
 extension RepoSearchViewController : UISearchBarDelegate {
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-    GithubService.repositoriesForSearchTerm(searchBar.text)
+//    GithubService.repositoriesForSearchTerm(searchBar.text
+//      (searchTerm, in
+//      println("worked")
+    GithubService.repositoriesForSearchTerm(searchBar.text, completionHandler: { (errorDescription, repos) -> (Void) in
+      if let error = errorDescription {
+        
+      }
+    })
+    }
   }
-  
-  
 
-  
-  
-  
-  
-  
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		17933B4E1B839E6600B0FC4B /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = 17933B4D1B839E6600B0FC4B /* server.js */; };
-		17933B531B839F8C00B0FC4B /* GithubJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B521B839F8C00B0FC4B /* GithubJSONParser.swift */; };
-		17933B551B83A10F00B0FC4B /* GithubSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B541B83A10F00B0FC4B /* GithubSearch.swift */; };
+		17933B531B839F8C00B0FC4B /* RepoJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B521B839F8C00B0FC4B /* RepoJSONParser.swift */; };
+		17933B551B83A10F00B0FC4B /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B541B83A10F00B0FC4B /* Repos.swift */; };
 		17933B591B83D22A00B0FC4B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B581B83D22A00B0FC4B /* AuthService.swift */; };
 		17933B5B1B83D37700B0FC4B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B5A1B83D37700B0FC4B /* Keys.swift */; };
 		17933B5D1B83EC0E00B0FC4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B5C1B83EC0E00B0FC4B /* LoginViewController.swift */; };
 		17933B5F1B84FC1B00B0FC4B /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B5E1B84FC1B00B0FC4B /* KeyChainService.swift */; };
 		17933B611B851E8000B0FC4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B601B851E8000B0FC4B /* Constants.swift */; };
 		17933B631B853E1500B0FC4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B621B853E1500B0FC4B /* User.swift */; };
+		17933B651B86426B00B0FC4B /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17933B641B86426B00B0FC4B /* UserJSONParser.swift */; };
 		17E1E2171B82771500720B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1E2161B82771500720B98 /* AppDelegate.swift */; };
 		17E1E2191B82771500720B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1E2181B82771500720B98 /* ViewController.swift */; };
 		17E1E21C1B82771500720B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E1E21A1B82771500720B98 /* Main.storyboard */; };
@@ -39,14 +40,15 @@
 
 /* Begin PBXFileReference section */
 		17933B4D1B839E6600B0FC4B /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
-		17933B521B839F8C00B0FC4B /* GithubJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubJSONParser.swift; sourceTree = "<group>"; };
-		17933B541B83A10F00B0FC4B /* GithubSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearch.swift; sourceTree = "<group>"; };
+		17933B521B839F8C00B0FC4B /* RepoJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoJSONParser.swift; sourceTree = "<group>"; };
+		17933B541B83A10F00B0FC4B /* Repos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		17933B581B83D22A00B0FC4B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		17933B5A1B83D37700B0FC4B /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		17933B5C1B83EC0E00B0FC4B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17933B5E1B84FC1B00B0FC4B /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		17933B601B851E8000B0FC4B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17933B621B853E1500B0FC4B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		17933B641B86426B00B0FC4B /* UserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSONParser.swift; sourceTree = "<group>"; };
 		17E1E2111B82771500720B98 /* GithubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E1E2151B82771500720B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E1E2161B82771500720B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 				17933B581B83D22A00B0FC4B /* AuthService.swift */,
 				17933B5A1B83D37700B0FC4B /* Keys.swift */,
 				17933B601B851E8000B0FC4B /* Constants.swift */,
-				17933B541B83A10F00B0FC4B /* GithubSearch.swift */,
+				17933B541B83A10F00B0FC4B /* Repos.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -109,7 +111,8 @@
 			children = (
 				17E1E21A1B82771500720B98 /* Main.storyboard */,
 				17933B5E1B84FC1B00B0FC4B /* KeyChainService.swift */,
-				17933B521B839F8C00B0FC4B /* GithubJSONParser.swift */,
+				17933B521B839F8C00B0FC4B /* RepoJSONParser.swift */,
+				17933B641B86426B00B0FC4B /* UserJSONParser.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -279,8 +282,9 @@
 				17E1E23B1B82882000720B98 /* GithubService.swift in Sources */,
 				17E1E2171B82771500720B98 /* AppDelegate.swift in Sources */,
 				17E1E2391B82834000720B98 /* MenuTableViewController.swift in Sources */,
-				17933B551B83A10F00B0FC4B /* GithubSearch.swift in Sources */,
-				17933B531B839F8C00B0FC4B /* GithubJSONParser.swift in Sources */,
+				17933B551B83A10F00B0FC4B /* Repos.swift in Sources */,
+				17933B651B86426B00B0FC4B /* UserJSONParser.swift in Sources */,
+				17933B531B839F8C00B0FC4B /* RepoJSONParser.swift in Sources */,
 				17933B5F1B84FC1B00B0FC4B /* KeyChainService.swift in Sources */,
 				17933B5B1B83D37700B0FC4B /* Keys.swift in Sources */,
 				17933B5D1B83EC0E00B0FC4B /* LoginViewController.swift in Sources */,
