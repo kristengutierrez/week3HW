@@ -9,10 +9,11 @@
 import UIKit
 
 class RepoSearchViewController: UIViewController {
-  
+  var repo = [Repos]()
   
   @IBOutlet weak var searchBar: UISearchBar!
   
+  @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,22 +43,38 @@ class RepoSearchViewController: UIViewController {
 
 extension RepoSearchViewController : UISearchBarDelegate {
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-//    GithubService.repositoriesForSearchTerm(searchBar.text
-//      (searchTerm, in
-//      println("worked")
     GithubService.repositoriesForSearchTerm(searchBar.text, completionHandler: { (errorDescription, repos) -> (Void) in
       if let error = errorDescription {
-        
+      }
+      if let repos = repos {
+        self.repo = repos
+        self.tableView.reloadData()
+       // NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+        //})     
       }
     })
     }
   }
 
 
+extension RepoSearchViewController : UITableViewDataSource {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.repo.count
+  }
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("RepoSearchCell", forIndexPath: indexPath) as! RepoCell
+    cell.nameLabel.text = repo[indexPath.row].name
+    cell.descriptionLabel.text = repo[indexPath.row].description
+    cell.languageLabel.text = repo[indexPath.row].language
+  return cell
+}
+}
 
-
-
-
+extension RepoSearchViewController : UITableViewDelegate {
+  func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    self.performSegueWithIdentifier("repoPressed", sender: self)
+  }
+}
 
 
 

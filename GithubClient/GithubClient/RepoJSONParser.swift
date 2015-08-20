@@ -19,9 +19,8 @@ class RepoJSONParser {
            if let name = githubObject["name"] as? String,
           url = githubObject["url"] as? String,
           language = githubObject["language"] as? String,
-          ownerInfo = githubObject["owner"] as? [String : AnyObject],
-          avatar_url = ownerInfo["avatar_url"] as? String {
-            var repoResult = Repos(name: name, url: url, language: language)
+            description = githubObject["description"] as? String {
+              var repoResult = Repos(name: name, url: url, language: language, description: description)
             repoResults.append(repoResult)
             }
           }

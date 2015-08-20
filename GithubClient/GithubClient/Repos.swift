@@ -12,4 +12,5 @@ struct Repos {
   let name : String
   let url : String?
   let language : String?
+  let description : String?
 }

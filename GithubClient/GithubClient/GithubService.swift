@@ -10,14 +10,19 @@ import Foundation
 
 class GithubService {
   class func repositoriesForSearchTerm(searchTerm : String, completionHandler : (String?, [Repos]?) -> (Void)) {
-    let baseURL =   "https://www.github.com/search/repositories"
+    let baseURL =   "https://api.github.com/search/repositories"
     let finalURL = baseURL + "?q=\(searchTerm)"
+    let request = NSMutableURLRequest(URL: NSURL(string: finalURL)!)
+    if let token = KeychainService.loadToken() {
+      request.setValue("token \(token)", forHTTPHeaderField: "Authorization")
+
     if let url = NSURL(string: finalURL) {
       NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
         if let error = error {
           println("error")
         } else if let httpResponse = response as? NSHTTPURLResponse {
           println(httpResponse.statusCode)
+        
           switch httpResponse.statusCode {
           case 200...299:
             let repositories = RepoJSONParser.outputFromJSONData(data)
@@ -35,9 +40,9 @@ class GithubService {
       }).resume()
     }
   }
-  
+  }
   class func userForSearchTerm(searchTerm: String, completionHandler : (String?, [User]?) -> (Void)) {
-    let baseURL =   "https://www.github.com/search/users"
+    let baseURL =   "https://api.github.com/search/users"
     let finalURL = baseURL + "?q=\(searchTerm)"
     let request = NSMutableURLRequest(URL: NSURL(string: finalURL)!)
     if let token = KeychainService.loadToken() {
@@ -51,7 +56,7 @@ class GithubService {
           println(httpResponse.statusCode)
           switch httpResponse.statusCode {
           case 200...299:
-            let users = GithubJSONParser.outputFromJSONData(data)
+            let users = UserJSONParser.outputFromJSONData(data)
             completionHandler(nil, users)
           case 400...499:
             completionHandler("Our fault", nil)
