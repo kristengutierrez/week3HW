@@ -17,8 +17,10 @@ class RepoSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+      tableView.estimatedRowHeight = 70
+      tableView.rowHeight = UITableViewAutomaticDimension
+      tableView.delegate = self
+      tableView.dataSource = self
       searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -37,7 +39,9 @@ class RepoSearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+  override func viewWillAppear(animated: Bool) {
+    tableView.reloadData()
+  }
 }
 
 
@@ -47,10 +51,15 @@ extension RepoSearchViewController : UISearchBarDelegate {
       if let error = errorDescription {
       }
       if let repos = repos {
-        self.repo = repos
-        self.tableView.reloadData()
-       // NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-        //})     
+//        self.repo = repos
+//        println(repos[0].name)
+//        self.tableView.reloadData()
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+          
+          self.repo = repos
+          println(repos[0].name)
+          self.tableView.reloadData()
+        })     
       }
     })
     }
