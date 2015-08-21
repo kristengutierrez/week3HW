@@ -253,21 +253,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apk-z8-Em1">
-                                <rect key="frame" x="238" y="60" width="124" height="124"/>
+                                <rect key="frame" x="238" y="104" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="Ml0-yY-x0C"/>
                                     <constraint firstAttribute="height" constant="124" id="hay-47-5DI"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-bO-LYD">
+                                <rect key="frame" x="279" y="236" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OoC-bO-LYD" secondAttribute="centerX" id="JPI-DJ-506"/>
                             <constraint firstAttribute="centerX" secondItem="apk-z8-Em1" secondAttribute="centerX" id="Sh3-N9-eba"/>
                             <constraint firstItem="apk-z8-Em1" firstAttribute="top" secondItem="PtW-gS-4CR" secondAttribute="bottom" constant="40" id="wgE-cU-krX"/>
+                            <constraint firstItem="OoC-bO-LYD" firstAttribute="top" secondItem="apk-z8-Em1" secondAttribute="bottom" constant="8" id="zmp-yM-GFg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="apk-z8-Em1" id="QQi-GF-aW2"/>
+                        <outlet property="loginLabel" destination="OoC-bO-LYD" id="ynC-Sw-BU5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGR-6K-ud8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,23 +315,37 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pPS-o5-nL1">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="frt-cO-jYQ">
-                                    <size key="itemSize" width="124" height="124"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCell" id="zwA-RZ-F61">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCell" id="zwA-RZ-F61" customClass="UserCell" customModule="GithubClient" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-SM-7Vs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="SQH-SM-7Vs" secondAttribute="trailing" constant="-8" id="FQb-0L-KeK"/>
+                                            <constraint firstItem="SQH-SM-7Vs" firstAttribute="top" secondItem="zwA-RZ-F61" secondAttribute="topMargin" constant="-8" id="TPp-9j-xm7"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="SQH-SM-7Vs" secondAttribute="bottom" constant="-8" id="emv-yA-Tq4"/>
+                                            <constraint firstItem="SQH-SM-7Vs" firstAttribute="leading" secondItem="zwA-RZ-F61" secondAttribute="leadingMargin" constant="-8" id="xMM-4Z-59p"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
                                         <connections>
-                                            <segue destination="33B-0D-4Lu" kind="presentation" id="P3P-gm-a2t"/>
+                                            <outlet property="avatarImageView" destination="SQH-SM-7Vs" id="Uiq-SM-QVG"/>
+                                            <segue destination="33B-0D-4Lu" kind="show" identifier="ShowUserDetail" id="P3P-gm-a2t"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

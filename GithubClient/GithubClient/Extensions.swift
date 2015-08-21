@@ -15,5 +15,6 @@ extension String {
       let match = regex.numberOfMatchesInString(self, options: nil, range: NSRange(location: 0, length: count(self)))
       return match > 0 ?  false : true
     }
+    return false
   }
 }

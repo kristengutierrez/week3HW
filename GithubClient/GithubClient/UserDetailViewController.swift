@@ -13,13 +13,17 @@ class UserDetailViewController : ViewController {
   
   @IBOutlet weak var imageView: UIImageView!
   
+  @IBOutlet weak var loginLabel: UILabel!
   
+  
+  var selectedUser : User!
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
   navigationController?.delegate = nil
   imageView.image = selectedUser.image
+    loginLabel.text = selectedUser.login
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

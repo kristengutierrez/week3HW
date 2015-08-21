@@ -20,7 +20,7 @@ class UserJSONParser {
           if let login = githubObject["login"] as? String,
             avatarURL = githubObject["avatar_url"] as? String,
             id = githubObject["id"] as? Int {
-              var userResult = User(login: login, avatarURL: avatarURL, id: id)
+              var userResult = User(login: login, avatarURL: avatarURL, id: id, image: nil)
               userResults.append(userResult)
           }
         }

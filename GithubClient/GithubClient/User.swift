@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 koz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 struct User {
   let login : String
   let avatarURL : String
   let id : Int
+  var image : UIImage?
 }

@@ -12,6 +12,7 @@ class UserCell : UICollectionViewCell {
   
   
   
+  @IBOutlet weak var avatarImageView: UIImageView!
   
   
   

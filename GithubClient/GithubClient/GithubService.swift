@@ -57,6 +57,7 @@ class GithubService {
           switch httpResponse.statusCode {
           case 200...299:
             let users = UserJSONParser.outputFromJSONData(data)
+            println(users)
             completionHandler(nil, users)
           case 400...499:
             completionHandler("Our fault", nil)
