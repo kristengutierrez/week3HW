@@ -13,4 +13,5 @@ struct Repos {
   let url : String?
   let language : String?
   let description : String?
+  let htmlURL : String?
 }

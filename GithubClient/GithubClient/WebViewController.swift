@@ -10,16 +10,18 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-
+  var htmlURL = [Repos]()
+  
+  @IBOutlet var containerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
       
       let webView = WKWebView(frame: view.frame)
       view.addSubview(webView)
-      
-      let urlRequest = NSURLRequest(URL: NSURL (string: "google.com")!)
+//      var htmlString = RepoJSONParser.outputFromJSONData(data)
+//      var url = NSURL(string: )
+      let urlRequest = NSURLRequest(URL: NSURL (string: "\(htmlURL)")!)
       webView.loadRequest(urlRequest)
       
       

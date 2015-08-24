@@ -51,11 +51,7 @@ extension RepoSearchViewController : UISearchBarDelegate {
       if let error = errorDescription {
       }
       if let repos = repos {
-//        self.repo = repos
-//        println(repos[0].name)
-//        self.tableView.reloadData()
         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-          
           self.repo = repos
           println(repos[0].name)
           self.tableView.reloadData()

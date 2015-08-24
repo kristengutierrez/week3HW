@@ -35,7 +35,6 @@ extension ToUserDetailAnimationController : UIViewControllerAnimatedTransitionin
         
         containerView.addSubview(snapShot)
         userCell.hidden = true
-        //ensure that my destination image view is in place
         toVC.view.layoutIfNeeded()
         toVC.imageView.hidden = true
         let destinationFrame = toVC.imageView.frame
