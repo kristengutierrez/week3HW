@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
-  var htmlURL = [Repos]()
+  var htmlURL : Repos?
   
   @IBOutlet var containerView: UIView!
 
@@ -18,10 +18,10 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
       
       let webView = WKWebView(frame: view.frame)
-      view.addSubview(webView)
+      containerView.addSubview(webView)
 //      var htmlString = RepoJSONParser.outputFromJSONData(data)
-//      var url = NSURL(string: )
-      let urlRequest = NSURLRequest(URL: NSURL (string: "\(htmlURL)")!)
+      var url = NSURL(string: htmlURL!.htmlURL!)
+      let urlRequest = NSURLRequest(URL: url!)
       webView.loadRequest(urlRequest)
       
       
