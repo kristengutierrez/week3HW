@@ -20,6 +20,10 @@ returnNumbers(anotherNumberArray)
 
 //TUESDAY//
 //Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
+//var cool = [2, 4, 1, 7, 3, 7, 9, 3, 5]
+//var coolLength = cool.count
+//var middle = coolLength / 2
+//var cooler = cool[index(middle, middle + 1, middle + 2)]
 
 
 
@@ -27,11 +31,19 @@ returnNumbers(anotherNumberArray)
 
 //WEDNESDAY//
 //Given a non-negative number "num", return true if num is within 2 of a multiple of 10. Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2
-
+//func doStuff(num: Int) -> Bool? {
+//  if num % 2 {
+//    return true
+//  }
+//  return nil
+//}
 
 
 
 
 //THURSDAY//
 //Given a string, return a string where for every char in the original, there are two chars. 
+var words = "Kristen"
+var separatedWords = words.componentsSeparatedByString("")
+
 

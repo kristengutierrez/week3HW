@@ -78,7 +78,7 @@ extension RepoSearchViewController : UITableViewDataSource {
 
 extension RepoSearchViewController : UITableViewDelegate {
   func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-    self.performSegueWithIdentifier("repoPressed", sender: self)
+    performSegueWithIdentifier("repoPressed", sender: self)
   }
 }
 

@@ -111,6 +111,7 @@ extension UserSearchViewController : UICollectionViewDataSource {
     var user = users[indexPath.row]
     if let image = user.image {
       cell.avatarImageView.image = image
+      cell.alpha = 1
     } else {
       
       ImageService.fetchProfileImageURL(user.avatarURL, imageQueue: imageQueue, completionHandler: { (image) -> () in
